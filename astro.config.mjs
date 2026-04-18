@@ -4,21 +4,23 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://mohankumargupta.github.io',
+	base: '/tinkercad',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'Tinkercad Tutorial',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/mohankumargupta/tinkercad' }],
 			sidebar: [
+				// {
+				// 	label: 'Guides',
+				// 	items: [
+				// 		// Each item here is one entry in the navigation menu.
+				// 		{ label: 'Example Guide', slug: 'guides/example' },
+				// 	],
+				// },
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Examples',
+					autogenerate: { directory: 'examples' },
 				},
 			],
 		}),
