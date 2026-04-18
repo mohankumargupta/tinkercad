@@ -1,0 +1,27 @@
+---
+// src/components/ThemeProvider.astro
+---
+{/* 
+  This script runs as early as possible in the <head> to prevent a "flash" of the wrong theme. 
+  It checks localStorage for a user's manual choice; if none exists, it defaults to 'light'.
+*/}
+<script is:inline>
+  window.StarlightThemeProvider = (() => {
+    const storedTheme = typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+    // If user has a preference, use it; otherwise, default to 'light' (ignoring system 'auto')
+    const theme = storedTheme || 'light';
+    document.documentElement.dataset.theme = theme;
+    return {
+      updateTheme: (newTheme) => {
+        const resolvedTheme = newTheme === 'auto' ? 'light' : newTheme;
+        document.documentElement.dataset.theme = resolvedTheme;
+        localStorage.setItem('starlight-theme', newTheme);
+      },
+    };
+  })();
+</script>
+
+<template id="starlight-theme-select">
+  {/* Maintain the template structure Starlight expects for the UI toggle */}
+  <slot />
+</template>
