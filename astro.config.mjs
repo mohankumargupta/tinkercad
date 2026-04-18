@@ -12,6 +12,7 @@ export default defineConfig({
 			components: {
 				ThemeProvider: './src/components/ThemeProvider.astro'
 			},
+			customCss: ['/src/styles/custom.css'],
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/mohankumargupta/tinkercad' }],
 			sidebar: [
 				// {
