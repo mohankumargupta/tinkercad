@@ -26,6 +26,10 @@ export default defineConfig({
 					label: 'Examples',
 					autogenerate: { directory: 'examples' },
 				},
+				{
+					label: 'Fundamentals',
+					autogenerate: { directory: 'fundamentals' },
+				},				
 			],
 		}),
 	],
