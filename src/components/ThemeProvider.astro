@@ -1,27 +1,49 @@
 ---
 // src/components/ThemeProvider.astro
+// Use the public Starlight component import!
+import { Icon } from '@astrojs/starlight/components';
 ---
-{/* 
-  This script runs as early as possible in the <head> to prevent a "flash" of the wrong theme. 
-  It checks localStorage for a user's manual choice; if none exists, it defaults to 'light'.
-*/}
+
+{/* This is intentionally inlined to avoid FOUC. */}
 <script is:inline>
-  window.StarlightThemeProvider = (() => {
-    const storedTheme = typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
-    // If user has a preference, use it; otherwise, default to 'light' (ignoring system 'auto')
-    const theme = storedTheme || 'light';
-    document.documentElement.dataset.theme = theme;
-    return {
-      updateTheme: (newTheme) => {
-        const resolvedTheme = newTheme === 'auto' ? 'light' : newTheme;
-        document.documentElement.dataset.theme = resolvedTheme;
-        localStorage.setItem('starlight-theme', newTheme);
-      },
-    };
-  })();
+	window.StarlightThemeProvider = (() => {
+		const storedTheme = typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		
+		// 1. Force 'light' instead of checking window.matchMedia
+		const theme = storedTheme || 'light';
+		
+		// 2. CRITICAL FIX: Seed localStorage immediately!
+		// This prevents ThemeSelect.astro from seeing an empty storage, 
+		// falling back to 'auto', and overwriting us with the system scheme.
+		if (!storedTheme && typeof localStorage !== 'undefined') {
+			localStorage.setItem('starlight-theme', 'light');
+		}
+
+		document.documentElement.dataset.theme = theme;
+
+		return {
+			updatePickers(theme = storedTheme || 'light') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
 </script>
 
-<template id="starlight-theme-select">
-  {/* Maintain the template structure Starlight expects for the UI toggle */}
-  <slot />
+<template id="theme-icons">
+	<Icon name="sun" class="light" />
+	<Icon name="moon" class="dark" />
+	<Icon name="laptop" class="auto" />
 </template>
+
