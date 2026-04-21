@@ -1,0 +1,43 @@
+---
+title: Lego Brick 2x4
+description: Lego brick 2x4
+sidebar:
+  order: 3
+---
+
+import { Image } from 'astro:assets';
+import poster from '../../../assets/legobrick-schematic.jpg';
+//import altschematic from '../../../assets/legoschematicalt.jpg';
+
+<Image src={poster} alt="Lego brick schematic" />
+
+## Key dimensions
+
+
+#### Outer Dimensions (The "Box")
+
+* Length: 15.8mm
+* Width: 31.8mm
+* Height: 9.6mm (This is the height of the brick body, excluding the studs/pips).
+
+------------------------------
+#### Inner Cavity (The "Hole")
+
+* Width: 13.4mm (Explicitly labeled in the center view).
+* Length: 29.4mm (Calculated: 31.8mm total - 1.2mm wall thickness on each side).
+* Height: 8.6mm (Calculated: $9.6mm total - 1.0mm top thickness).
+
+------------------------------
+#### Studs / Pips (Top Cylinders)
+
+* Diameter: 4.8mm
+* Height: 1.8mm
+* Spacing: 8.0mm (Center-to-center).
+
+------------------------------
+#### Inner Tubes (Bottom Cylinders)
+
+* Outer Diameter: 6.51mm
+* Inner Diameter: 4.8mm (to fit the studs from another brick).
+* Wall Thickness: 0.8mm (This is the dimension labeled at coordinate D-4).
+
