@@ -6,10 +6,12 @@ sidebar:
 ---
 
 import { Image } from 'astro:assets';
-import poster from '../../../assets/legobrick-schematic.jpg';
+import poster from '../../../assets/legobrick-poster.png';
+import schematic from '../../../assets/legobrick-schematic.jpg';
 //import altschematic from '../../../assets/legoschematicalt.jpg';
 
-<Image src={poster} alt="Lego brick schematic" />
+<Image src={poster} alt="Lego brick poster" />
+<Image src={schematic} alt="Lego brick schematic" />
 
 ## Key dimensions
 
@@ -41,3 +43,32 @@ import poster from '../../../assets/legobrick-schematic.jpg';
 * Inner Diameter: 4.8mm (to fit the studs from another brick).
 * Wall Thickness: 0.8mm (This is the dimension labeled at coordinate D-4).
 
+## Steps
+
+To create this LEGO brick in Tinkercad, follow this specific order to ensure the alignment and "hollowing out" process works correctly.
+Note: Use the Snap Grid (bottom right) and set it to 0.1 mm for precision.
+1. The Main Body (The Shell)
+Drag a Box (Solid) onto the plane.
+Change dimensions to Length: 31.8 mm, Width: 15.8 mm, and Height: 9.6 mm.
+2. The Interior Cutout (The Hole)
+Drag a Box (Hole) onto the plane.
+Change dimensions to Length: 29.4 mm and Width: 13.4 mm.
+Set the Height to 9.6 mm (it just needs to be tall enough to cut through).
+Alignment: Select both boxes, click the Align tool, and center them on the Length and Width axes.
+The Offset: Lift the Hole box down by 1.0 mm (using the black cone above the shape) so it doesn't cut through the top of the brick.
+Select both and click Group.
+3. The Top Studs (Pips)
+Drag a Cylinder (Solid) onto the top of brick.
+Change dimensions to Diameter: 4.8 mm and Height: 1.8 mm.
+Positioning: Place the first stud at the corner (
+
+ from the edges to the center, as per the diagram).
+Duplicate: Use Ctrl + D and move the copy 8.0 mm to create the row. Repeat until you have all 8 studs.
+Select the brick and all studs and Group.
+4. The Inner Tubes (Underside)
+Drag a Cylinder (Solid) onto the bottom of the brick. Dimensions: Diameter: 6.51 mm, Height: 8.6 mm.
+Drag a second Cylinder (Hole). Dimensions: Diameter: 4.8 mm, Height: 9.0 mm.
+Align these two cylinders to their centers and Group them to create a tube.
+Positioning: Flip the view to the bottom. Place the tube centered between the studs (the diagram shows them spaced 8.0 mm apart).
+Duplicate the tube twice to create the 3 tubes seen in the drawing.
+Final Step: Select everything and Group.
