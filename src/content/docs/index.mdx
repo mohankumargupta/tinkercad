@@ -2,39 +2,96 @@
 title: Tinkercad Tutorial
 description: Tinkercad
 ---
-
 import { LinkButton } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
 
-Here are the core competencies that will be covered.
-
-## Basic
-
-#### Workspace Navigation
-
-- use the View Cube to orbit the workspace
-- use the Home button to reset view
-- orbit, panning, zooming using mouse
-
-#### Basic shapes
-
-- box, cylinders, sphere, torus
-- solid and holes
-- use Shape Properies Window to change shape dimensions
-
-#### Move, resize and rotate a shape
-- select a shape and move and resize it
-
+import viewcube  from '../../assets/tinkercad-viewcube.png';
+import home from '../../assets/tinkercad-home.png';
+import fitall from '../../assets/tinkercad-fitall.png';
+import switchview from '../../assets/tinkercad-switch-view.png';
+import box from '../../assets/tinkercad-box.png';
+import cylinder from '../../assets/tinkercad-cylinder.png';
+import sphere from '../../assets/tinkercad-sphere.png';
+import text from '../../assets/tinkercad-text.png';
+import cone from '../../assets/tinkercad-cone.png';
+import roof from '../../assets/tinkercad-roof.png';
+import roundedroof from '../../assets/tinkercad-roundedroof.png';
+import halfsphere from '../../assets/tinkercad-halfsphere.png';
+import paraboloid from '../../assets/tinkercad-paraboloid.png';
+import star from '../../assets/tinkercad-star.png';
+import heart from '../../assets/tinkercad-heart.png';
+import wedge from '../../assets/tinkercad-wedge.png';
 
 
-## Intermediate
+### 🧭 Navigate the Workplane
 
+By doing the examples on this site, you will develop the following core competencies in Tinkercad.
 
-## Advanced
+| Image | Tool | Actions | How to Use |
+|-------|------|--------|--------------|
+| <Image src={viewcube} alt="View Cube"/> | **View Cube** | 1. Rotate workplane <br/>2. Rotate to preset Views | 1. Drag cube to rotate workplane <br/>2. Click faces for **Top**, **Front**, or **Side** views. |
+| <Image src={home} alt="View Cube"/> | **Home** | Reset View | Returns to default front-facing perspective. |
+| <Image src={fitall} alt="View Cube"/> | **Zoom fit all** | Zoom fit selected | Fits screen (nothing selected) or centers on **selected objects**. |
+| <Image src={switchview} alt="View Cube"/> | **Perspective/Flat** | Toggle View | Switches between 3D **Perspective** view and flat **Orthogonal** view. |
+|  | **Pan View** | Move workplane horizontally or vertically | Hold `Ctrl` + Right Click + move touchpad|
 
-- sketch tool
-- revolve tool
+### 🧱 Basic Shapes
 
+**Essential**
+
+| Icon | Shape |
+|------|-------|
+| <Image src={box} alt="Box"/> | Box | 
+| <Image src={cylinder} alt="Cylinder"/>  | Cylinder | 
+| <Image src={sphere} alt="Sphere"/>  | Sphere |
+| <Image src={text} alt="Text"/>  | Text |
+
+**good to know it exists**
+
+| Icon | Shape |
+|------|-------|
+| <Image src={cone} alt="Cone"/> | Cone |
+| <Image src={roof} alt="Roof"/> | Roof |
+| <Image src={roundedroof} alt="Rounded roof"/> | Rounded Roof |
+| <Image src={halfsphere} alt="Cone"/> | Half Sphere |
+| <Image src={paraboloid} alt="Paraboloid"/> | Paraboloid |
+| <Image src={star} alt="Star"/> | Star |
+| <Image src={heart} alt="Heart"/> | Heart |
+| <Image src={wedge} alt="Wedge"/> | Wedge |
+
+See [here](https://www.tinkercad.com/blog/meet-the-shapes-panel) for a intro from Tinkercad blog
+
+### ✏️ Transform
+
+**Move**
+
+move object by first making sure nothing is selected(click off or click blank space), then simply click and drag in one motion.
+
+| Action | Shortcut | Result |
+|--------|----------|--------|
+| Horizontal | Arrow Keys | Move 1 grid unit. |
+| Horizontal (Large) | `Shift` + Arrows | Move 10 grid units. |
+| Vertical | Drag Up Arrow Cone | Raise or lower object. |
+
+**Rotate**
+
+| Action | Shortcut | Result |
+|--------|----------|--------|
+| Set Angle | Select Handle → `Tab` → Type # | Rotate to exact degree. |
+
+**Resize**
+
+| Action | Shortcut | Result |
+|--------|----------|--------|
+| Set Dimension | Select Handle → `Tab` → Type # | Resize to exact size. |
+| Next Dimension | Press `Tab` | Jump between width/depth/height inputs. |
+| Confirm | Press `Enter` | Finalize change. |
+
+## Coming soon
+*   **Intermediate** — grouping, aligning, importing
+*   **Advanced** — sketch tool, revolve tool
 
 <p style="margin-top:100px;">
-<LinkButton href="/tinkercad/examples/emoji1/">Start Examples -></LinkButton>
+  <LinkButton href="/tinkercad/examples/emoji1/">Start Examples →</LinkButton>
 </p>
+
