@@ -1,0 +1,49 @@
+---
+// src/components/LinkedImage.astro
+import { Image } from "astro:assets";
+import type { ComponentProps } from "astro/types";
+import { undefined } from "astro:schema";
+
+// Inherit all standard Image props (src, alt, width, height, etc.)
+type Props = ComponentProps<typeof Image> & {
+  caption?: string;
+};
+
+const { src, alt, caption, ...attrs } = Astro.props;
+const cap = "Click to see full view";
+
+
+// Determine the URL for the link. 
+// For imported local images, src is an object with a .src property (the URL).
+// For remote strings, src is just the string.
+const imageUrl = typeof src === 'string' ? src : src.src;
+---
+
+<figure class="linked-image-container">
+  <a href={imageUrl} target="_blank" rel="noopener noreferrer" title="View full size image">
+    <Image src={src} alt={alt} {...attrs} />
+  </a>
+  {cap && (
+    <figcaption>
+      {cap}
+    </figcaption>
+  )}
+</figure>
+
+<style>
+  .linked-image-container {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .linked-image-container img {
+    cursor: zoom-in;
+    border-radius: 0.5rem;
+    border: 1px solid var(--sl-color-gray-5);
+  }
+  figcaption {
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+    margin-top: 0.5rem;
+  }
+</style>
+
