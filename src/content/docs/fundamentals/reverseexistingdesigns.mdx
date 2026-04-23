@@ -1,0 +1,31 @@
+---
+title: Reverse Engineering Existing Tinkercad designs
+description: Reverse engineer tinkercad
+sidebar:
+  order: 3
+---
+
+import { Image } from 'astro:assets';
+import poster from '../../../assets/reverse-engineer-existing-tinkercad.png';
+
+<Image src={poster} alt="Reverse engineer tinkercad" />
+
+## Sequence
+
+1. Select object
+2. Press Ctrl-D to duplicate or hit duplicate icon
+3. move item away horizontally(use shift+arrow keys)
+4. **Then ungroup this object using ungroup icon, then click off(click on empty space)**
+5. Select the duplicate again, and move item away using shift+arrow keys.
+   You will then see one of the consituent parts move away. You can move way other consituent parts also.
+   
+   
+   There are two options from here:
+    - if it is a basic shape, you are done breaking this down to its simplest,
+      repeat the process for other shapes
+    - if it is a union of multiple shapes(you can tell by observing if ungroup icon is enabled or greyed out),
+      then repeat step 5 for this selected object.
+
+## Finding dimensions
+
+Simply put a ruler on the workplane, then select an object to find its dimensions.
