@@ -7,12 +7,15 @@ sidebar:
 
 import { Image } from 'astro:assets';
 
-import poster from '../../../assets/plasticcup-poster.png';
-import base from '../../../assets/tinkercad-import.png';
-import imported from '../../../assets/batman-1.png';
-import cylinder from '../../../assets/batman-2.png';
-import cylinder2 from '../../../assets/batman-3.png';
+import poster from '../../../assets/batman-poster.png';
+import base from '../../../assets/batman-1.png';
+import batman2 from '../../../assets/batman-2.png';
+import batman3 from '../../../assets/batman-3.png';
+import batman4 from '../../../assets/batman-4.png';
+import batman5 from '../../../assets/batman-5.png';
+import batman6 from '../../../assets/batman-6.png';
 
+<Image src={poster} alt="batman"/>
 
 ## Steps
 
@@ -24,26 +27,31 @@ Get batman logo SVG from [here](https://worldvectorlogo.com/logo/batman-5/)
 
 Import SVG into  Tinkercad 
 
-<Image src={base} alt="batman"/>
+<Image src={base} alt="batman svg"/>
 
-Do a uniform resize (press Alt+Shift+ click and drag corner white square icon on imported shape) 
-to reduce the size.
+#### Step 3
 
-<Image src={imported} alt="batman imported"/>
+Drop in a cylinder so that it covers the logo but doesnt touch the outer ring. 
+Use align to center both.
 
-### Step 3 
+<Image src={batman2} alt="batman svg"/>
 
-You will notice that the outside ring/tube and the inner logo is one shape, and can't be ungrouped.
-We will need to force the ungrouping. 
+<Image src={batman3} alt="batman svg"/>
 
-Drag a cylinder onto workplane. The job of the cylinder is to entirely cover the inner batman logo while
-not touching the outer ring in order to separate the two.
+#### Step 4
 
-<Image src={cylinder} alt="inner shape"/>
+Select both shapes and press group icon, then select intersect option.
 
-<Image src={cylinder2} alt="top view inner shape"/>
+<Image src={batman4} alt="batman svg"/>
+
+### specs
+
+<Image src={batman5} alt="batman svg"/>
+
+<Image src={batman6} alt="batman svg"/>
 
 
+yellow color: custom #fef102
 
 
 
