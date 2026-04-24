@@ -1,0 +1,49 @@
+---
+title: Batman logo
+description: Batman logo in tinkercad
+sidebar:
+  order: 9
+---
+
+import { Image } from 'astro:assets';
+
+import poster from '../../../assets/plasticcup-poster.png';
+import base from '../../../assets/tinkercad-import.png';
+import imported from '../../../assets/batman-1.png';
+import cylinder from '../../../assets/batman-2.png';
+import cylinder2 from '../../../assets/batman-3.png';
+
+
+## Steps
+
+#### Step 1
+
+Get batman logo SVG from [here](https://worldvectorlogo.com/logo/batman-5/)
+
+#### Step2 
+
+Import SVG into  Tinkercad 
+
+<Image src={base} alt="batman"/>
+
+Do a uniform resize (press Alt+Shift+ click and drag corner white square icon on imported shape) 
+to reduce the size.
+
+<Image src={imported} alt="batman imported"/>
+
+### Step 3 
+
+You will notice that the outside ring/tube and the inner logo is one shape, and can't be ungrouped.
+We will need to force the ungrouping. 
+
+Drag a cylinder onto workplane. The job of the cylinder is to entirely cover the inner batman logo while
+not touching the outer ring in order to separate the two.
+
+<Image src={cylinder} alt="inner shape"/>
+
+<Image src={cylinder2} alt="top view inner shape"/>
+
+
+
+
+
