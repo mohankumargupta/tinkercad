@@ -5,7 +5,9 @@ description: Tinkercad
 import { LinkButton } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
+import ui from '../../assets/tinkercad-interface.jpg';
 import viewcube  from '../../assets/tinkercad-viewcube.png';
+import basicshapes from '../../assets/tinkercad-basicshapes.jpg';
 import home from '../../assets/tinkercad-home.png';
 import fitall from '../../assets/tinkercad-fitall.png';
 import switchview from '../../assets/tinkercad-switch-view.png';
@@ -22,20 +24,20 @@ import star from '../../assets/tinkercad-star.png';
 import heart from '../../assets/tinkercad-heart.png';
 import wedge from '../../assets/tinkercad-wedge.png';
 
+<a target="_blank" href="https://maker.pro/custom/tutorial/introduction-to-tinkercad">
+<Image src={ui} alt="UI" />
+</a>
 
-### 🧭 Navigate the Workplane
+### Excellent intro for absolute beginners
 
-By doing the examples on this site, you will develop the following core competencies in Tinkercad.
-
-| Image | Tool | Actions | How to Use |
-|-------|------|--------|--------------|
-| <Image src={viewcube} alt="View Cube"/> | **View Cube** | 1. Rotate workplane <br/>2. Rotate to preset Views | 1. Drag cube to rotate workplane <br/>2. Click faces for **Top**, **Front**, or **Side** views. |
-| <Image src={home} alt="View Cube"/> | **Home** | Reset View | Returns to default front-facing perspective. |
-| <Image src={fitall} alt="View Cube"/> | **Zoom fit all** | Zoom fit selected | Fits screen (nothing selected) or centers on **selected objects**. |
-| <Image src={switchview} alt="View Cube"/> | **Perspective/Flat** | Toggle View | Switches between 3D **Perspective** view and flat **Orthogonal** view. |
-|  | **Pan View** | Move workplane horizontally or vertically | Hold `Ctrl` + Right Click + move touchpad|
+<LinkButton href="https://www.youtube.com/watch?v=E8Kf2k0qI7o" variant="primary" target="_blank">Intro youtube video</LinkButton>
 
 ### 🧱 Basic Shapes
+
+<Image src={basicshapes} alt="basic shapes" />
+
+Complex shapes (3d objects) are made of basic shapes. Knowledge of basic shapes and when to use 
+them is a critical skill to learn in Tinkercad.
 
 **Essential**
 
@@ -61,6 +63,18 @@ By doing the examples on this site, you will develop the following core competen
 
 See [here](https://www.tinkercad.com/blog/meet-the-shapes-panel) for a intro from Tinkercad blog
 
+### 🧭 Navigate the Workplane
+
+
+| Image | Tool | Actions | How to Use |
+|-------|------|--------|--------------|
+| <Image src={viewcube} alt="View Cube"/> | **View Cube** | 1. Rotate workplane <br/>2. Rotate to preset Views | 1. Drag cube to rotate workplane <br/>2. Click faces for **Top**, **Front**, or **Side** views. |
+| <Image src={home} alt="View Cube"/> | **Home** | Reset View | Returns to default front-facing perspective. |
+| <Image src={fitall} alt="View Cube"/> | **Zoom fit all** | Zoom fit selected | Fits screen (nothing selected) or centers on **selected objects**. |
+| <Image src={switchview} alt="View Cube"/> | **Perspective/Flat** | Toggle View | Switches between 3D **Perspective** view and flat **Orthogonal** view. |
+|  | **Pan View** | Move workplane horizontally or vertically | Hold `Ctrl` + Right Click + move touchpad|
+
+
 ### ✏️ Transform
 
 **Move**
@@ -81,6 +95,8 @@ move object by first making sure nothing is selected(click off or click blank sp
 
 **Resize**
 
+[Excellent youtube video about scaling objects](https://www.youtube.com/watch?v=jSN26AqmUR8)
+
 | Action | Shortcut | Result |
 |--------|----------|--------|
 | Set Dimension | Select Handle → `Tab` → Type # | Resize to exact size. |
@@ -92,6 +108,6 @@ move object by first making sure nothing is selected(click off or click blank sp
 *   **Advanced** — sketch tool, revolve tool
 
 <p style="margin-top:100px;">
-  <LinkButton href="/tinkercad/examples/emoji1/">Start Examples →</LinkButton>
+  <LinkButton href="/tinkercad/examples/platewithhole/">Start Examples →</LinkButton>
 </p>
 
