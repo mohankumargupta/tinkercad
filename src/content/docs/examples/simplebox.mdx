@@ -1,0 +1,42 @@
+---
+title: Simple box
+description: simple box in tinkercad
+sidebar:
+  order: 2
+---
+
+import { Image } from 'astro:assets';
+import poster from '../../../assets/simplebox-poster.png';
+import outerbox from '../../../assets/simplebox-1.png';
+import innerbox from '../../../assets/simplebox-2.png';
+import select from '../../../assets/simplebox-3.png';
+import align from '../../../assets/simplebox-4.png';
+import holebottom from '../../../assets/simplebox-5.png';
+import raisehole from '../../../assets/simplebox-6.png';
+import uniongroup from '../../../assets/simplebox-7.png';
+
+<Image src={poster} alt="Simple Box" />
+
+## Dimensions(mm)
+
+#### Outer box
+
+**Length * Width * Height** :  ** 109 x 77 x 47 **
+
+#### Inner box(hole)
+
+**Length * Width * Height** :  ** 105 x 73 x 52 **
+
+**Wall thickness** : 2
+
+Inner box is 2mm above workplane
+
+## Steps
+
+<Image src={outerbox} alt="outer box" />
+<Image src={innerbox} alt="inner box" />
+<Image src={select} alt="select" />
+<Image src={align} alt="align" />
+<Image src={holebottom} alt="box has hole at bottom" />
+<Image src={raisehole} alt="raise inner box hole" />
+<Image src={uniongroup} alt="correctly fixed hole at bottom" />
