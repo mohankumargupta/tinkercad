@@ -7,18 +7,85 @@ sidebar:
 
 import { Image } from 'astro:assets';
 import shortcuts from '../../../assets/keyboardshortcutsbrief.jpg';
+import ShortcutMenu from '../../../components/ShortcutMenu.astro';
+import Shortcut from '../../../components/Shortcut.astro';
+import Kbd from '../../../components/Kbd.astro';
 
 <Image src={shortcuts} alt="Brief keyboard shortcuts in Tinkercad" />
 
-Can get away not using Keyboard shortcuts in Tinkercad, but some are just invaluable to make
-your workflow in Tinkercad faster.
+You can get away with not using Keyboard shortcuts in Tinkercad, but some are just invaluable to make your workflow in Tinkercad faster.
 
 ## Most important keyboard shortcuts
 
-- Ctrl-Z: undo
-- D: drop to workspace
-- Ctrl+D: duplicate
-- Shift+Right click+move mouse: Panning
-- Ctrl+Arrow Keys: nudge a shape vertically
-- Tab to give focus to entering dimensions in textbix directly on workspace when object selected
-  Also use tab when to gain focus to textbox where you can angle when rotating
+- **Ctrl-Z**: undo
+- **D**: drop to workspace
+- **Ctrl+D**: duplicate
+- **Shift+Right click+move mouse**: Panning
+- **Ctrl+Arrow Keys**: nudge a shape vertically
+- **Tab**: Give focus to entering dimensions in textbox directly on workspace when object selected. Also use tab when to gain focus to textbox where you can angle when rotating.
+
+## Editor Shortcuts
+
+<ShortcutMenu>
+  {/* Column 1 */}
+  <div class="flex flex-col gap-4">
+    <Shortcut label="Show/Hide UI" highlighted>
+      <Kbd filled>a</Kbd>
+      <Kbd filled>b</Kbd>
+    </Shortcut>
+    <Shortcut label="Multiplayer cursors">
+      <Kbd>c</Kbd>
+      <Kbd>d</Kbd>
+      <Kbd>e</Kbd>
+    </Shortcut>
+  </div>
+
+  {/* Column 2 */}
+  <div class="flex flex-col gap-4">
+    <Shortcut label="Rulers">
+      <Kbd>⇧</Kbd>
+      <Kbd>R</Kbd>
+    </Shortcut>
+    <Shortcut label="Outlines" highlighted>
+      <Kbd filled>⌘</Kbd>
+      <Kbd filled>Y</Kbd>
+    </Shortcut>
+    <Shortcut label="Pixel preview" highlighted>
+      <Kbd filled>⌃</Kbd>
+      <Kbd filled>P</Kbd>
+    </Shortcut>
+    <Shortcut label="Layout grids" highlighted>
+      <Kbd filled>⌃</Kbd>
+      <Kbd filled>G</Kbd>
+    </Shortcut>
+    <Shortcut label="Pixel grid" highlighted>
+      <Kbd filled>⌘</Kbd>
+      <Kbd filled>'</Kbd>
+    </Shortcut>
+  </div>
+
+  {/* Column 3 */}
+  <div class="flex flex-col gap-4">
+    <Shortcut label="Open layers panel" highlighted>
+      <Kbd filled>a</Kbd>
+      <Kbd filled>b</Kbd>
+    </Shortcut>
+    <Shortcut label="Libraries" highlighted>
+      <Kbd filled>a</Kbd>
+      <Kbd filled>b</Kbd>
+    </Shortcut>
+    <Shortcut label="Open design panel">
+      <Kbd>a</Kbd>
+      <Kbd>b</Kbd>
+    </Shortcut>
+    <Shortcut label="Open prototype panel">
+      <Kbd>a</Kbd>
+      <Kbd>b</Kbd>
+    </Shortcut>
+    <Shortcut label="Open inspect panel">
+      <Kbd>a</Kbd>
+      <Kbd>b</Kbd>
+    </Shortcut>
+  </div>
+</ShortcutMenu>
+

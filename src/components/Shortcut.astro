@@ -1,0 +1,21 @@
+---
+// src/components/Shortcut.astro
+interface Props {
+  label: string;
+  highlighted?: boolean;
+}
+const { label, highlighted = false } = Astro.props;
+---
+
+<div class="flex items-center justify-between w-full mb-4 last:mb-0">
+  <span class:list={[
+    "text-sm tracking-wide", 
+    highlighted ? "text-[#559ef6]" : "text-neutral-300"
+  ]}>
+    {label}
+  </span>
+  <div class="flex items-center gap-1.5">
+    <slot />
+  </div>
+</div>
+

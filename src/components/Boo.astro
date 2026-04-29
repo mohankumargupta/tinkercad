@@ -1,0 +1,142 @@
+---
+interface Props {}
+---
+
+<div class="min-h-screen bg-gray-50 p-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="flex items-start justify-between mb-12">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-red-600 flex items-center justify-center text-white text-xs font-bold">
+          TIN
+        </div>
+        <div class="w-8 h-8 bg-orange-500 flex items-center justify-center text-white text-xs font-bold">
+          KER
+        </div>
+        <div class="w-8 h-8 bg-blue-600 flex items-center justify-center text-white text-xs font-bold">
+          CAD
+        </div>
+        <div class="ml-2">
+          <p class="text-sm font-semibold text-gray-900">AUTODESK</p>
+          <p class="text-sm text-gray-600">TINKERCAD</p>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">KEYBOARD SHORTCUTS</h1>
+        <div class="flex items-center gap-2 justify-end">
+          <span class="text-xs text-gray-600">Legend:</span>
+          <div class="flex gap-2">
+            <kbd class="px-2 py-1 bg-gray-800 text-white text-xs font-semibold rounded">Ctrl</kbd>
+            <kbd class="px-2 py-1 bg-gray-800 text-white text-xs font-semibold rounded">Cmd</kbd>
+            <kbd class="px-2 py-1 bg-gray-800 text-white text-xs font-semibold rounded">Alt</kbd>
+            <kbd class="px-2 py-1 bg-gray-800 text-white text-xs font-semibold rounded">Shift</kbd>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-2 gap-12">
+      <!-- Left Column: Moving Objects -->
+      <div>
+        <h2 class="text-xl font-bold text-gray-900 mb-1">MOVING OBJECT(S)</h2>
+        <p class="text-sm text-gray-500 mb-6">Using keyboard</p>
+
+        <!-- Shortcut Items -->
+        <div class="space-y-6">
+          <!-- Move along X/Y axis -->
+          <div>
+            <p class="text-sm font-semibold text-gray-900 mb-3">Move along X/Y axis</p>
+            <div class="flex gap-2">
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">←</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">↑</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">→</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">↓</kbd>
+            </div>
+          </div>
+
+          <!-- Move along Z axis -->
+          <div>
+            <p class="text-sm font-semibold text-gray-900 mb-3">Move along Z axis</p>
+            <div class="flex gap-2">
+              <kbd class="px-2 py-1 bg-gray-800 text-white text-xs font-semibold rounded">Ctrl</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">↑</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">↓</kbd>
+            </div>
+          </div>
+
+          <!-- >10 Nudge along X/Y axis -->
+          <div>
+            <p class="text-sm font-semibold text-gray-900 mb-3">>10 Nudge along X/Y axis</p>
+            <div class="flex gap-2">
+              <kbd class="px-2 py-1 bg-gray-800 text-white text-xs font-semibold rounded">Shift</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">←</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">↑</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">→</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">↓</kbd>
+            </div>
+          </div>
+
+          <!-- >10 Nudge along Z axis -->
+          <div>
+            <p class="text-sm font-semibold text-gray-900 mb-3">>10 Nudge along Z axis</p>
+            <div class="flex gap-2">
+              <kbd class="px-2 py-1 bg-gray-800 text-white text-xs font-semibold rounded">Ctrl</kbd>
+              <kbd class="px-2 py-1 bg-gray-800 text-white text-xs font-semibold rounded">Shift</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">↑</kbd>
+              <kbd class="px-2 py-1 bg-gray-700 text-white text-xs font-semibold rounded w-8 h-8 flex items-center justify-center">↓</kbd>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Object Settings -->
+      <div>
+        <h2 class="text-xl font-bold text-gray-900 mb-6">OBJECT SETTINGS</h2>
+
+        <div class="space-y-6">
+          <!-- Transparency toggle -->
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-semibold text-gray-900">Transparency toggle</p>
+            <kbd class="px-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded">T</kbd>
+          </div>
+
+          <!-- Turn into Holes -->
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-semibold text-gray-900">Turn object(s) into Holes</p>
+            <kbd class="px-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded">H</kbd>
+          </div>
+
+          <!-- Turn into Solids -->
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-semibold text-gray-900">Turn object(s) into Solids</p>
+            <kbd class="px-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded">S</kbd>
+          </div>
+
+          <!-- Lock or Unlock -->
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-semibold text-gray-900">Lock or Unlock object(s)</p>
+            <div class="flex gap-2">
+              <kbd class="px-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded">Ctrl</kbd>
+              <kbd class="px-3 py-2 bg-gray-800 text-white text-xs font-semibold rounded">L</kbd>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative line separator -->
+        <div class="mt-12 pt-8 border-t border-gray-300"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  kbd {
+    @apply transition-colors duration-200;
+  }
+
+  kbd:hover {
+    @apply bg-gray-900;
+  }
+</style>
