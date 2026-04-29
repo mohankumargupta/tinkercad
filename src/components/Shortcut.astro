@@ -7,17 +7,14 @@ interface Props {
 const { label, highlighted = false } = Astro.props;
 ---
 
-<div class="flex items-center justify-between gap-6 mb-4 last:mb-0">
+<div class="contents">
   <span class:list={[
-    "text-sm tracking-wide leading-tight flex-1",
+    "text-sm tracking-wide leading-tight items-baseline",
     highlighted ? "text-[#559ef6]" : "text-neutral-300"
   ]}>
     {label}
   </span>
-  <div class="flex items-center gap-1.5 shrink-0">
+  <div class="flex items-baseline gap-1.5">
     <slot />
   </div>
 </div>
-
-
-
