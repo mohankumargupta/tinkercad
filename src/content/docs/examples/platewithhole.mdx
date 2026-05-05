@@ -16,6 +16,9 @@ import platewithhole4 from '../../../assets/platewithhole-4.png';
 import platewithhole5 from '../../../assets/platewithhole-5.png';
 import platewithhole6 from '../../../assets/platewithhole-6.png';
 
+import align from '../../../assets/align.svg';
+import group from '../../../assets/group.svg';
+
 
 <Image src={poster} alt="Plate with hole" />
 
@@ -31,31 +34,58 @@ import platewithhole6 from '../../../assets/platewithhole-6.png';
 
 Hole is at the center of the rectangular plate.
 
-### Step 1 box
+### Step 1: box
 <LinkedImage src={platewithhole1} alt="Plate with hole" />
 
-### Step 2 cylinder
+### Step 2: cylinder
 
-<LinkedImage src={platewithhole2} alt="Plate with hole" />
+<LinkedImage src={platewithhole2} alt="Cylinder hole in plate" />
 
-### Step 3 select both shapes
+### Step 3: select both shapes
 
-<Image src={platewithhole3} alt="Plate with hole" />
+<Image src={platewithhole3} alt="Select shapes" />
 
 Two ways to select shape:
 
 1. Start outside both shapes, then left click and drag, you will notice a dashed box appear. Make 
    sure the dashed box at least partly cover both shapes.
-2. Using keyboard shortcuts, select one shape, then press Shift then press the other shape.
+2. Using keyboard shortcuts, select one shape, then press **Shift**, then press the other shape.
 
-You will know it worked when you see **Shapes(2)** in the Properties window.
+You will know it worked when you see **Shapes(2)** in the Shape Options/Properties panel/window.
+
+### Step 4: use the align tool to center the cylinder in the rectangle
 
 <Image src={platewithhole4} alt="Plate with hole" />
+
+Now that both shapes are selected, click the align tool. <Image src={align} alt="align" /> The greyed out ones in the image are the
+ones you need to click. The fact that they are greyed out is a visual indication that the shape is
+centered in that axis.
+
+:::tip[Pro Tip]
+Normally when you align two shapes after clicking align tool, both shapes physically move.
+
+Sometimes, you want one object(eg. the box) to be stationary while the other object(eg. the cylinder)
+moves to the correct alignment.
+
+To achieve this, immediately click on the stationary object after clicking the align tool.
+You will notice the dots surround the stationary object. Then make your alignments. The result
+will be that the cylinder moves to the stationary box.
+:::
+
+
+### Step 5: make the cylinder a hole
+
 <Image src={platewithhole5} alt="Plate with hole" />
+
+### Step 6: group the hole cylinder with box
+
 <Image src={platewithhole6} alt="Plate with hole" />
 
+Click the group tool <Image src={group} alt="group" /> and then click off.
 
+### See Also
 
+[How to make hole in shape tutorial youtube video](https://www.youtube.com/watch?v=1BM3vXK5WS4)
 
 
 
