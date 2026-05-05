@@ -6,6 +6,7 @@ sidebar:
 ---
 
 import { Image } from 'astro:assets';
+import LinkedImage from '../../../components/LinkedImage.astro';
 
 import poster from '../../../assets/platewithhole-poster.png';
 import platewithhole1 from '../../../assets/platewithhole-1.png';
@@ -30,9 +31,25 @@ import platewithhole6 from '../../../assets/platewithhole-6.png';
 
 Hole is at the center of the rectangular plate.
 
-<Image src={platewithhole1} alt="Plate with hole" />
-<Image src={platewithhole2} alt="Plate with hole" />
+### Step 1 box
+<LinkedImage src={platewithhole1} alt="Plate with hole" />
+
+### Step 2 cylinder
+
+<LinkedImage src={platewithhole2} alt="Plate with hole" />
+
+### Step 3 select both shapes
+
 <Image src={platewithhole3} alt="Plate with hole" />
+
+Two ways to select shape:
+
+1. Start outside both shapes, then left click and drag, you will notice a dashed box appear. Make 
+   sure the dashed box at least partly cover both shapes.
+2. Using keyboard shortcuts, select one shape, then press Shift then press the other shape.
+
+You will know it worked when you see **Shapes(2)** in the Properties window.
+
 <Image src={platewithhole4} alt="Plate with hole" />
 <Image src={platewithhole5} alt="Plate with hole" />
 <Image src={platewithhole6} alt="Plate with hole" />
