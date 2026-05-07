@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from '@astrojs/starlight/components';
+
+interface Props {
+  src: any;
+  alt: string;
+  href: string;
+  caption?: string; 
+}
+
+const { src, alt, href, caption = "Click image for more details" } = Astro.props;
+---
+
+<figure class="linked-image-container">
+  <a href={href} target="_blank" rel="noopener noreferrer" class="image-link">
+    <Image src={src} alt={alt} />
+    <figcaption class="image-caption">
+      Open {caption} in New Tab <span class="icon"><Icon name="external" size="1rem"  class="inline-icon" /></span>
+    </figcaption>
+  </a>
+</figure>
+
+<style>
+  .linked-image-container {
+    margin: 1.5rem 0;
+    max-width: 100%;
+  }
+
+  .image-link {
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .image-link:hover {
+    opacity: 0.9;
+  }
+
+  .image-link:hover .image-caption {
+    color: #007bff; /* Highlight color on hover */
+    text-decoration: underline;
+  }
+
+  .image-caption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .icon {
+    font-style: normal;
+  }
+
+  .inline-icon {
+    display: inline;      /* Ensures the icon itself doesn't act as a block */
+  }
+</style>

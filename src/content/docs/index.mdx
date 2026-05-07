@@ -4,6 +4,7 @@ description: Tinkercad
 ---
 import { LinkButton } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
+import ImageHyperlink from '../../components/ImageHyperlink.astro';
 
 import ui from '../../assets/tinkercad-interface.jpg';
 import viewcube  from '../../assets/tinkercad-viewcube.png';
@@ -32,9 +33,11 @@ Learn by doing examples on this site.
 ### Tinkercad Interface
 <p></p>
 
-<a target="_blank" href="https://maker.pro/custom/tutorial/introduction-to-tinkercad">
+<ImageHyperlink src={ui} alt="UI" href="https://maker.pro/custom/tutorial/introduction-to-tinkercad" caption="Introduction to Tinkercad"/>
+
+{/* <a target="_blank" href="https://maker.pro/custom/tutorial/introduction-to-tinkercad">
 <Image src={ui} alt="UI" />
-</a>
+</a> */}
 
 ### Excellent intro for absolute beginners
 
@@ -44,8 +47,7 @@ Learn by doing examples on this site.
 
 <Image src={basicshapes} alt="basic shapes" />
 
-Complex shapes (3d objects) are made of basic shapes. Knowledge of basic shapes and when to use 
-them is a critical skill to learn in Tinkercad.
+Complex shapes (3d objects) are made of basic shapes. 
 
 **Essential**
 
@@ -57,13 +59,12 @@ them is a critical skill to learn in Tinkercad.
 | <Image src={text} alt="Text"/>  | Text |
 | <Image src={torus} alt="Torus"/>  | Torus |
 | <Image src={tube} alt="Tube"/>  | Tube |
+| <Image src={cone} alt="Cone"/> | Cone |
 
-
-**good to know it exists**
+**Good to know**
 
 | Icon | Shape |
 |------|-------|
-| <Image src={cone} alt="Cone"/> | Cone |
 | <Image src={roof} alt="Roof"/> | Roof |
 | <Image src={roundedroof} alt="Rounded roof"/> | Rounded Roof |
 | <Image src={halfsphere} alt="Cone"/> | Half Sphere |
@@ -72,7 +73,7 @@ them is a critical skill to learn in Tinkercad.
 | <Image src={heart} alt="Heart"/> | Heart |
 | <Image src={wedge} alt="Wedge"/> | Wedge |
 
-See [here](https://www.tinkercad.com/blog/meet-the-shapes-panel) for a intro from Tinkercad blog
+See <a target="_blank" href="https://www.tinkercad.com/blog/meet-the-shapes-panel">here</a> for a intro from Tinkercad blog
 
 ### 🧭 Navigate the Workplane
 
@@ -80,11 +81,12 @@ See [here](https://www.tinkercad.com/blog/meet-the-shapes-panel) for a intro fro
 | Image | Tool | Actions | How to Use |
 |-------|------|--------|--------------|
 | <Image src={viewcube} alt="View Cube"/> | **View Cube** | 1. Rotate workplane <br/>2. Rotate to preset Views | 1. Drag cube to rotate workplane <br/>2. Click faces for **Top**, **Front**, or **Side** views. |
-| <Image src={home} alt="View Cube"/> | **Home** | Reset View | Returns to default front-facing perspective. |
-| <Image src={fitall} alt="View Cube"/> | **Zoom fit all** | Zoom fit selected | Fits screen (nothing selected) or centers on **selected objects**. |
-| <Image src={switchview} alt="View Cube"/> | **Perspective/Flat** | Toggle View | Switches between 3D **Perspective** view and flat **Orthogonal** view. |
+| <Image src={home} alt="Home"/> | **Home** | Reset View | Returns to default front-facing perspective. |
+| <Image src={fitall} alt="Fit all"/> | **Zoom fit all** | Zoom fit selected | Fits screen (nothing selected) or centers on **selected objects**. |
+| <Image src={switchview} alt="Switch View"/> | **Perspective/Flat** | Toggle View | Switches between 3D **Perspective** view and flat **Orthogonal** view. |
 |  | **Pan View** | Move workplane horizontally or vertically | Hold `Ctrl` + Right Click + move touchpad|
 
+<LinkButton href="https://www.youtube.com/watch?v=XVnNXVXHHM8" variant="primary" target="_blank">youtube video</LinkButton>
 
 ### Grid unit
 
