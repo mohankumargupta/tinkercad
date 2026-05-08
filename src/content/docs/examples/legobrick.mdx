@@ -10,6 +10,14 @@ import LinkedImage from '../../../components/LinkedImage.astro';
 
 import poster from '../../../assets/legobrick-poster.png';
 import schematic from '../../../assets/legobrick-schematic.jpg';
+import lego1 from '../../../assets/legobrick-1.png';
+import lego2 from '../../../assets/legobrick-2.png';
+import lego3 from '../../../assets/legobrick-3.png';
+import lego4 from '../../../assets/legobrick-4.png';
+import lego5 from '../../../assets/legobrick-5.png';
+import lego6 from '../../../assets/legobrick-6.png';
+import lego7 from '../../../assets/legobrick-7.png';
+import lego8 from '../../../assets/legobrick-8.png';
 
 
 <Image src={poster} alt="Lego brick poster" />
@@ -29,7 +37,7 @@ import schematic from '../../../assets/legobrick-schematic.jpg';
 
 * Width: 13.4mm (Explicitly labeled in the center view).
 * Length: 29.4mm (Calculated: 31.8mm total - 1.2mm wall thickness on each side).
-* Height: 8.6mm (Calculated: $9.6mm total - 1.0mm top thickness).
+* Height: 8.6mm (Calculated: 9.6mm total - 1.0mm top thickness).
 
 ------------------------------
 #### Studs / Pips (Top Cylinders)
@@ -47,18 +55,65 @@ import schematic from '../../../assets/legobrick-schematic.jpg';
 
 ## Steps
 
+### Step 1: Main body
+
+<LinkedImage src={lego1} alt="Lego brick step 1" />
+
+### Step 2: Interior hole
+
+<LinkedImage src={lego2} alt="Lego brick step 2" />
+
+The interior hole needs to be lowered by 1.0mm. You can do this 2 ways:
+
+- Use the back cone to lower shape
+- Set the grid unit to **1.0mm** , then press **Ctrl** and **↓ down arrow** 
+
+### Step 3: Align both shapes and group
+
+<LinkedImage src={lego3} alt="Lego brick step 3" />
+
+<LinkedImage src={lego4} alt="Lego brick step 4" />
+
+
+### Step 4: Pips
+
+<LinkedImage src={lego5} alt="Lego brick step 5" />
+
+
+### Step 5: Position pip accurately
+
+<LinkedImage src={lego6} alt="Lego brick step 6" />
+
+This is tricky. 
+
+1. Drag a ruler onto lego brick in top left corner.
+2. Click on the three dashes on the ruler and select **Use midpoint**
+3. To get a perfect top down view, click on top on view cube and switch to flat view.
+4. The dimensions in green specify the distance from ruler origin to midpoint of pip.
+
+### Step 6: Create pip array or pattern
+
+<LinkedImage src={lego7} alt="Lego brick step 7" />
+
+Before starting, make sure grid unit is 1.0mm
+
+1. Select pip
+2. Select duplicate or **Ctrl+D**
+3. Hit **right arrow** 8 times to go **8.0mm** to right
+4. Hit **Ctrl+D** 2 more times to complete row
+
+### Step 7: Create both rows
+
+<LinkedImage src={lego8} alt="Lego brick step 8" />
+
+1. Select all pips (select one, then **Shift** select the others)
+2. Hit **Ctrl+D**
+3. We need to move down **7.98mm** . We will achieve this in two Steps
+   - move down **8.0mm**
+   - put the ruler on the bottom left corner and use the green dimension to adjust offset
+
 To create this LEGO brick in Tinkercad, follow this specific order to ensure the alignment and "hollowing out" process works correctly.
 Note: Use the Snap Grid (bottom right) and set it to 0.1 mm for precision.
-1. The Main Body (The Shell)
-Drag a Box (Solid) onto the plane.
-Change dimensions to Length: 31.8 mm, Width: 15.8 mm, and Height: 9.6 mm.
-2. The Interior Cutout (The Hole)
-Drag a Box (Hole) onto the plane.
-Change dimensions to Length: 29.4 mm and Width: 13.4 mm.
-Set the Height to 9.6 mm (it just needs to be tall enough to cut through).
-Alignment: Select both boxes, click the Align tool, and center them on the Length and Width axes.
-The Offset: Lift the Hole box down by 1.0 mm (using the black cone above the shape) so it doesn't cut through the top of the brick.
-Select both and click Group.
 3. The Top Studs (Pips)
 Drag a Cylinder (Solid) onto the top of brick.
 Change dimensions to Diameter: 4.8 mm and Height: 1.8 mm.
