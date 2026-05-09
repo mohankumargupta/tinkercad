@@ -6,6 +6,8 @@ sidebar:
 ---
 
 import { Image } from 'astro:assets';
+import LinkedImage from '../../../components/LinkedImage.astro';
+
 import poster from '../../../assets/simplebox-poster.png';
 import outerbox from '../../../assets/simplebox-1.png';
 import innerbox from '../../../assets/simplebox-2.png';
@@ -33,8 +35,8 @@ Inner box is 2mm above workplane
 
 ## Steps
 
-<Image src={outerbox} alt="outer box" />
-<Image src={innerbox} alt="inner box" />
+<LinkedImage src={outerbox} alt="outer box" />
+<LinkedImage src={innerbox} alt="inner box" />
 <Image src={select} alt="select" />
 <Image src={align} alt="align" />
 <Image src={holebottom} alt="box has hole at bottom" />

@@ -6,6 +6,8 @@ sidebar:
 ---
 
 import { Image } from 'astro:assets';
+import LinkedImage from '../../../components/LinkedImage.astro';
+
 
 import poster from '../../../assets/soap-poster.png';
 import base from '../../../assets/soap-1.png';
@@ -31,9 +33,9 @@ import text from '../../../assets/soap-2.png';
 
     **Radius**: 5, **Color**: pink
 
-<Image src={base} alt="Soap base" />
+<LinkedImage src={base} alt="Soap base" />
 
 2. Add text on top:
    **Text**: SOAP
 
-<Image src={text} alt="Soap text" />
+<LinkedImage src={text} alt="Soap text" />
