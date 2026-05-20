@@ -7,6 +7,7 @@ sidebar:
 
 import { Image } from 'astro:assets';
 import LinkedImage from '../../../components/LinkedImage.astro';
+import HyperLink from '../../../components/HyperLink.astro';
 
 import poster from '../../../assets/platewithhole-poster.png';
 import platewithhole1 from '../../../assets/platewithhole-1.png';
@@ -41,9 +42,10 @@ Hole is at the center of the rectangular plate.
 
 <LinkedImage src={platewithhole2} alt="Cylinder hole in plate" />
 
+Leave the height as 20mm.
+
 ### Step 3: select both shapes
 
-<Image src={platewithhole3} alt="Select shapes" />
 
 Two ways to select shape:
 
@@ -51,10 +53,10 @@ Two ways to select shape:
    sure the dashed box at least partly cover both shapes.
 2. Using keyboard shortcuts, select one shape, then press **Shift**, then press the other shape.
 
-You will know it worked when you see **Shapes(2)** in the Shape Options/Properties panel/window.
+You will know it worked when you see **Shapes(2)** in the Shape Options Panel
 
 ### Step 4: use the align tool to center the cylinder in the rectangle
-
+<Image src={platewithhole3} alt="Select shapes" />
 <Image src={platewithhole4} alt="Plate with hole" />
 
 Now that both shapes are selected, click the align tool. <Image src={align} alt="align" /> The greyed out ones in the image are the
@@ -70,6 +72,9 @@ moves to the correct alignment.
 To achieve this, immediately click on the stationary object after clicking the align tool.
 You will notice the dots surround the stationary object. Then make your alignments. The result
 will be that the cylinder moves to the stationary box.
+
+<HyperLink href="https://youtube.com/shorts/kPpx5lZBc_s?si=bxKJbDsOROda8TRo">Youtube Video</HyperLink>
+
 :::
 
 
