@@ -2,18 +2,22 @@
 interface Props {
   href: string;
   class?: string;
+  wrapper?: 'p' | 'div' | 'none';
 }
 
-const { href, class: className, ...rest } = Astro.props;
+const { href, wrapper = 'none',class: className, ...rest } = Astro.props;
+const WrapperTag = wrapper;
 ---
 
-<a 
-  href={href} 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  class={className}
-  {...rest}
->
-  <slot />
-</a>
+{wrapper === 'none' ? (
+  <a href={href} target="_blank" rel="noopener noreferrer" class={className} {...rest}>
+    <slot />
+  </a>
+) : (
+  <WrapperTag>
+    <a href={href} target="_blank" rel="noopener noreferrer" class={className} {...rest}>
+      <slot />
+    </a>
+  </WrapperTag>
+)}
 
