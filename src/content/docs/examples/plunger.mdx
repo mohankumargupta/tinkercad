@@ -8,23 +8,24 @@ sidebar:
 import { Image } from 'astro:assets';
 import LinkedImage from '../../../components/LinkedImage.astro';
 
-import plunger1 from '../../../assets/plunger-1.png';
-import plunger2 from '../../../assets/plunger-2.png';
+import plunger1 from '../../../assets/plungerfinal-1.png';
+import plunger2 from '../../../assets/plungerfinal-2.png';
 import plunger3 from '../../../assets/plunger-3.png';
 import plunger4 from '../../../assets/plunger-4.png';
-import plunger5 from '../../../assets/plunger-5.png';
-import plunger6 from '../../../assets/plunger-6.png';
-import plunger7 from '../../../assets/plunger-7.png';
-import plunger8 from '../../../assets/plunger-8.png';
-import plunger9 from '../../../assets/plunger-9.png';
-import plunger10 from '../../../assets/plunger-10.png';
-import plunger11 from '../../../assets/plunger-11.png';
+import plunger5 from '../../../assets/plungerfinal-3.png';
+import plunger6 from '../../../assets/plungerfinal-6.png';
+import plunger8 from '../../../assets/plungerfinal-8.png';
+import plunger9 from '../../../assets/plungerfinal-9.png';
+import plunger10 from '../../../assets/plungerfinal-10.png';
+
 
 ## Steps
 
 ### Step 1: Plunger cup
 
-Start with sphere 20mm x 20mm x 20mm.
+Start with sphere 40mm x 40mm x 40mm.
+
+The center of the sphere should be on the workplane (hence the -20.00mm in the diagram)
 
 <LinkedImage src={plunger1} alt="Plunger cup"/>
 
@@ -32,7 +33,7 @@ Duplicate and turn red
 
 <LinkedImage src={plunger2} alt="Plunger cup"/>
 
-With this red sphere, we need to shrink it to 18mm x 18mm x 18mm without moving the object.
+With this red sphere, we need to shrink it to 36mm x 36mm x 36mm without moving the object.
 
 You achieve this by clicking the right lower corner white square, pressing **Alt** and **Shift** 
 while also clicking and shrinking that white square until it read **18mm**. 
@@ -44,32 +45,29 @@ the blue sphere and  pressing **t** for transparent on your keyboard. Press **t*
 
 <Image src={plunger4} alt="Plunger cup"/>
 
-We need to hide the blue sphere to modify red sphere.
+Now drag a torus
 
 <Image src={plunger5} alt="Plunger cup"/>
 
-Make the red sphere a hole.
-
+Now select both and align
 
 <Image src={plunger6} alt="Plunger cup"/>
 
-Now bring back the blue sphere.
-
-<Image src={plunger7} alt="Plunger cup"/>
-
-Select both spheres, and group.
+Select both shapes and Union group 
 
 <Image src={plunger8} alt="Plunger cup"/>
 
-Drag out a hole box to cut the resultant shape in half, then group.
+drag a box and make sure it completely covers the shapes above the workplane.
 
 <Image src={plunger9} alt="Plunger cup"/>
-
 
 <Image src={plunger10} alt="Plunger cup"/>
 
 
-<Image src={plunger11} alt="Plunger cup"/>
+Press Ctrl+A to select all then union group 
+
+
+
 
 ## Step 2: Plunger Connector
 

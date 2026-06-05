@@ -11,7 +11,7 @@ export default defineConfig({
 
   integrations: [
       starlight({
-          title: 'Tinkercad Tutorial',
+          title: 'Tinkercad With Worked Examples',
       
           components: {
               ThemeProvider: './src/components/ThemeProvider.astro'
