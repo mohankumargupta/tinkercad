@@ -7,64 +7,59 @@ sidebar:
 
 import { Image } from 'astro:assets';
 import LinkedImage from '../../../components/LinkedImage.astro';
+import ImageHyperlink from '../../../components/ImageHyperlink.astro';
 
-import plunger1 from '../../../assets/plungerfinal-1.png';
-import plunger2 from '../../../assets/plungerfinal-2.png';
+import plunger1 from '../../../assets/plunger-1.png';
+import plunger2 from '../../../assets/plunger-2.png';
 import plunger3 from '../../../assets/plunger-3.png';
 import plunger4 from '../../../assets/plunger-4.png';
-import plunger5 from '../../../assets/plungerfinal-3.png';
-import plunger6 from '../../../assets/plungerfinal-6.png';
-import plunger8 from '../../../assets/plungerfinal-8.png';
-import plunger9 from '../../../assets/plungerfinal-9.png';
-import plunger10 from '../../../assets/plungerfinal-10.png';
+import plunger5 from '../../../assets/plunger-5.png';
+import plunger6 from '../../../assets/plunger-6.png';
+import plunger7 from '../../../assets/plunger-7.png';
+import plunger8 from '../../../assets/plunger-8.png';
+import plunger9 from '../../../assets/plunger-9.png';
 
 
 ## Steps
 
 ### Step 1: Plunger cup
 
+<LinkedImage src={plunger1} alt="Plunger" />
+
 Start with sphere 40mm x 40mm x 40mm.
 
 The center of the sphere should be on the workplane (hence the -20.00mm in the diagram)
 
-<LinkedImage src={plunger1} alt="Plunger cup"/>
+Turn it into a hole.
 
-Duplicate and turn red 
+<Image src={plunger2} alt="Plunger" />
 
-<LinkedImage src={plunger2} alt="Plunger cup"/>
+Now take a duplicate, make it solid, and change it dimensions to be 42mm x 42mm x 42mm
 
-With this red sphere, we need to shrink it to 36mm x 36mm x 36mm without moving the object.
+Now select both shapes and center align using align tool.
 
-You achieve this by clicking the right lower corner white square, pressing **Alt** and **Shift** 
-while also clicking and shrinking that white square until it read **18mm**. 
+<LinkedImage src={plunger3} alt="Plunger" />
+<LinkedImage src={plunger4} alt="Plunger" />
 
-<LinkedImage src={plunger3} alt="Plunger cup"/>
+And now select both and make them a bundle group. A bundle group means they can be moved 
+together as one unit, but they are still separate bodies.
 
-You now see the original blue sphere because it is bigger. You can see the red one inside by selecting
-the blue sphere and  pressing **t** for transparent on your keyboard. Press **t** again to make solid.
+<LinkedImage src={plunger5} alt="Plunger" />
 
-<Image src={plunger4} alt="Plunger cup"/>
+Change its color to red and now drag out a torus
 
-Now drag a torus
+<LinkedImage src={plunger6} alt="Plunger" />
 
-<Image src={plunger5} alt="Plunger cup"/>
+Select both shapes and align center
 
-Now select both and align
+<LinkedImage src={plunger7} alt="Plunger" />
 
-<Image src={plunger6} alt="Plunger cup"/>
+Now drag a box and make it a hole, we are going to use it to chop the model in half vertically.
+Make sure it completely covers bottom half the model.
 
-Select both shapes and Union group 
+<LinkedImage src={plunger8} alt="Plunger" />
 
-<Image src={plunger8} alt="Plunger cup"/>
-
-drag a box and make sure it completely covers the shapes above the workplane.
-
-<Image src={plunger9} alt="Plunger cup"/>
-
-<Image src={plunger10} alt="Plunger cup"/>
-
-
-Press Ctrl+A to select all then union group 
+<LinkedImage src={plunger9} alt="Plunger" />
 
 
 

@@ -5,4 +5,40 @@ sidebar:
   order: 2
 ---
 
-1. When completing a Union Group or Align, **ALWAYS** click off.
+import { Image } from 'astro:assets';
+
+import grid from '../../../assets/gridunit.png';
+
+1. When completing a **Union Group**, **Ungroup**, or **Align**, ALWAYS click off afterwards to complete operation.
+
+2. You can select shapes three ways:
+
+   - box select the shapes (left click and drag). Make sure you start outside both objects.
+   - select one object, then **Shift** select the other objects
+   - to select all objects: **Ctrl+A**
+
+3. When using duplicate (**Ctrl+D**), immediately use **Shift+Left** or **Shift+Right** afterwards without
+   touching mouse/trackpad.
+
+4. To move a shape, you don't need to use mouse/trackpad. It can all be done on keyboard.
+
+   THINGS TO KNOW:
+
+   - by default, workplane is 200mmx200mm by default. Each square is 10mmx10mm, if you zoom in
+     closely, you will see 1mmx1mm squares
+   - the current Snap Grid value is shown bottom right corner(default 1mm)
+     <Image src={grid} alt="snap grid tinkercad" />
+   - The current Snap Grid value determines how much an object moves when you use the arrow keys.
+
+
+   MOVE LEFT/RIGHT/UP/DOWN:
+
+   - If snap grid value 1mm, and I want to move a shape **3mm** to the **right**, select shape and press right arrow key three times.
+   - If snap grid value 1mm, and I want to move a shape **20mm** to the **left**, select shape and press **SHIFT** while pressing left arrow key two times. 
+    
+   MOVE OFF THE WORKPLANE (VERTICALLY UP AND DOWN):
+
+   - If snap grid value 1mm, and I want to move a shape **5mm** up off the workplane , select shape and press **Ctrl** while pressing  **up** arrow key five times.
+   - If snap grid value 1mm, and I want to move a shape **20mm** down below the workplane, select shape and press **Ctrl** and **Shift** while pressing  **down** arrow twice. 
+
+  
