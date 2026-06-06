@@ -9,6 +9,7 @@ import { Image } from 'astro:assets';
 import LinkedImage from '../../../components/LinkedImage.astro';
 import ImageHyperlink from '../../../components/ImageHyperlink.astro';
 
+
 import plunger1 from '../../../assets/plunger-1.png';
 import plunger2 from '../../../assets/plunger-2.png';
 import plunger3 from '../../../assets/plunger-3.png';
@@ -18,6 +19,9 @@ import plunger6 from '../../../assets/plunger-6.png';
 import plunger7 from '../../../assets/plunger-7.png';
 import plunger8 from '../../../assets/plunger-8.png';
 import plunger9 from '../../../assets/plunger-9.png';
+import plunger10 from '../../../assets/plunger-10.png';
+import plunger11 from '../../../assets/plunger-11.png';
+import plunger12 from '../../../assets/plunger-12.png';
 
 
 ## Steps
@@ -26,43 +30,53 @@ import plunger9 from '../../../assets/plunger-9.png';
 
 <LinkedImage src={plunger1} alt="Plunger" />
 
-Start with sphere 40mm x 40mm x 40mm.
+Start with 2 spheres: one solid, one hole
 
-The center of the sphere should be on the workplane (hence the -20.00mm in the diagram)
+SPHERE 1: 42mm x 42mm x 42mm , solid
 
-Turn it into a hole.
+SPHERE 2: 40mm x 40mm x 40mm , hole
 
-<Image src={plunger2} alt="Plunger" />
+The center of the spheres should be on the workplane.
 
-Now take a duplicate, make it solid, and change it dimensions to be 42mm x 42mm x 42mm
+
+<LinkedImage src={plunger2} alt="Plunger" />
+
+<LinkedImage src={plunger3} alt="Plunger" />
+
 
 Now select both shapes and center align using align tool.
 
-<LinkedImage src={plunger3} alt="Plunger" />
 <LinkedImage src={plunger4} alt="Plunger" />
 
-And now select both and make them a bundle group. A bundle group means they can be moved 
-together as one unit, but they are still separate bodies.
+And now select both and an do a union group.
 
 <LinkedImage src={plunger5} alt="Plunger" />
 
-Change its color to red and now drag out a torus
+
+Drag a box and make it a hole, we are going to use it to chop the model in half vertically.
+Make sure it completely covers bottom half the model.
 
 <LinkedImage src={plunger6} alt="Plunger" />
 
-Select both shapes and align center
-
 <LinkedImage src={plunger7} alt="Plunger" />
 
-Now drag a box and make it a hole, we are going to use it to chop the model in half vertically.
-Make sure it completely covers bottom half the model.
+Drag a torus onto workplane
 
 <LinkedImage src={plunger8} alt="Plunger" />
 
+Align the torus with the sphere
+
 <LinkedImage src={plunger9} alt="Plunger" />
 
+Union group the lot
 
+<LinkedImage src={plunger10} alt="Plunger" />
 
+<LinkedImage src={plunger11} alt="Plunger" />
+
+Change color to red
+
+<LinkedImage src={plunger12} alt="Plunger" />
 
 ## Step 2: Plunger Connector
 
