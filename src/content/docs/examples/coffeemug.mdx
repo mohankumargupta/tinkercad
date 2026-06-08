@@ -7,13 +7,15 @@ sidebar:
 
 import { Image } from 'astro:assets';
 import LinkedImage from '../../../components/LinkedImage.astro';
+import ImageHyperlink from '../../../components/ImageHyperlink.astro';
 
-
+import coffeemugdesign from '../../../assets/coffeemug-design.png';
 import poster from '../../../assets/coffeemug-poster.png';
 import base from '../../../assets/coffeemug-1.png';
 import hole from '../../../assets/coffeemug-2.png';
 import handle from '../../../assets/coffeemug-3.png';
 
+<ImageHyperlink href='https://www.tinkercad.com/things/hhl4XEDwamW-coffee-mug' src={coffeemugdesign} alt="coffeemug" />
 
 <LinkedImage src={poster} alt="Coffee mug" />
 <LinkedImage src={base} alt="Coffee mug" />

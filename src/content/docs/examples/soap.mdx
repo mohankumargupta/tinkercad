@@ -7,17 +7,16 @@ sidebar:
 
 import { Image } from 'astro:assets';
 import LinkedImage from '../../../components/LinkedImage.astro';
+import ImageHyperlink from '../../../components/ImageHyperlink.astro';
 
-
+import posterdesign from '../../../assets/soap-design.png';
 import poster from '../../../assets/soap-poster.png';
 import base from '../../../assets/soap-1.png';
 import text from '../../../assets/soap-2.png';
 
 
+<ImageHyperlink href='https://www.tinkercad.com/things/gP7gcUOMZqw-soap' src={posterdesign} alt="soap" />
 
-<a target="_blank" href="https://www.tinkercad.com/things/7a575Moq5np">
-<Image src={poster} alt="Soap" />
-</a>
 
 ## Core competencies
 
