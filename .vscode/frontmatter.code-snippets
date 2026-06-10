@@ -1,0 +1,20 @@
+{
+  "Frontmatter Block": {
+    "prefix": "frontmatter",
+    "body": [
+      "---",
+      "title: ${1}",
+      "description: ${2}",
+      "sidebar:",
+      "  order: ${3}",
+      "---",
+      "",
+      "import { Image } from 'astro:assets';",
+      "import LinkedImage from '../../../components/LinkedImage.astro'",
+      "import ImageHyperlink from '../../../components/ImageHyperlink.astro';",
+      "import HyperLink from '../../../components/HyperLink.astro';",
+      "$0"
+    ],
+    "description": "Inserts a standard frontmatter block with title, description, and sidebar order"
+  }
+}

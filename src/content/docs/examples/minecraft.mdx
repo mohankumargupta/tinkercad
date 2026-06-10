@@ -1,0 +1,19 @@
+---
+title: Minecraft
+description: Minecraft in tinkercad
+sidebar:
+  order: 17
+---
+
+import { Image } from 'astro:assets';
+import LinkedImage from '../../../components/LinkedImage.astro'
+import ImageHyperlink from '../../../components/ImageHyperlink.astro';
+import HyperLink from '../../../components/HyperLink.astro';
+
+import sword from '../../../assets/minecraft-sword.png';
+import steve from '../../../assets/minecraft-steve.png';
+import world from '../../../assets/minecraft-world.png';
+
+<ImageHyperlink src={steve} alt="Steve" href='https://www.tinkercad.com/things/ivkUb6DhYPp-minecraft-steve-minecraft'/>
+<ImageHyperlink src={sword} alt="Sword" href='https://www.tinkercad.com/things/iT1Ux7i2IJJ-minecraft-sword'/>
+<ImageHyperlink src={world} alt="World" href='https://www.tinkercad.com/things/c77Sli4fjQ8-minecraft-world'/>
